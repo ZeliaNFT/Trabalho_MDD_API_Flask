@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Previsão Iris</title>
+    <title>Previsão da Rotatividade de Clientes do Banco</title>
     <link rel="stylesheet" href="../static/bootstrap.css">
 </head>
 <body>
@@ -13,21 +13,44 @@
       </div>
       <form action="/predicaoform" method="post">
         <fieldset>
+          <div >
+            <p>Preencha com os dados do cliente para fazer a previsão.</p>
+        </div>
           <div class="form-group">
-            <label for="sepall">Sepal Length</label>
-            <input type="text" id="sepall" name="sepall" class="form-control">
+            <label for="pontuacao_credito">Qual o Score (Pontuação) de Credito?</label>
+            <input type="number" id="pontuacao_credito" name="pontuacao_credito" class="form-control"required>
           </div>
           <div class="form-group">
-            <label for="sepalw">Sepal Width</label>
-            <input type="text" id="sepalw" name="sepalw" class="form-control">
+            <label for="genero">Qual o Gênero: Digite 0: Masculino e 1: Feminino</label>
+            <input type="number" id="genero" name="genero" class="form-control"required>
           </div>
           <div class="form-group">
-            <label for="petall">Petal Length</label>
-            <input type="text" id="petall" name="petall" class="form-control">
+            <label for="idade">Qual a Idade?</label>
+            <input type="number" id="idade" name="idade" class="form-control"required>
           </div>
           <div class="form-group">
-            <label for="petalw">Petal Width</label>
-            <input type="text" id="petalw" name="petalw" class="form-control">
+            <label for="idade_conta">Há quanto tempo possuí a conta?</label>
+            <input type="number" id="idade_conta" name="idade_conta" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <label for="saldo">Qual a faixa de valor do Saldo: 1: 0 à 25.000 2: 25.000 à 50.000 3: 50.000 à 100.000 4: 100.000 à 180.000 5:Acima de 180.000</label>
+            <input type="number" id="saldo" name="saldo" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <label for="numero_produtos">Quantos serviços utiliza?</label>
+            <input type="number" id="numero_produtos" name="numero_produtos" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <label for="cartao_credito">Possuí cartão de crédito 0: Não Possui 1: Possuí</label>
+            <input type="number" id="cartao_credito" name="cartao_credito" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <label for="membro_ativo">O cliente é membro  ativo: 0: Não 1: Sim?</label>
+            <input type="number" id="membro_ativo" name="membro_ativo" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <label for="salario_estimado">Qual a faixa de valor do Salário salario_estimado: 1: 0 à 25.000 2: 25.000 à 50.000 3: 50.000 à 100.000 4: 100.000 à 180.000 5:Acima de 180.000</label>
+            <input type="number" id="salario_estimado" name="salario_estimado" class="form-control"required>
           </div>
           <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
         </fieldset>
